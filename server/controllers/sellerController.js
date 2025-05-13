@@ -26,13 +26,21 @@ export const sellerLogin = async (req, res) => {
   }
 };
 
-// Seller Auth: /api/seller/is-auth
+//  Seller Auth: /api/seller/is-auth (ilki sorun cikartiyor!!!)
+// export const isSellerAuth = async (req, res) => {
+//   try {
+//     const userId = req.userId; // bu kisim dogru mu bilmiyorum gecici cozum olabilir
+//     if (!userId) {
+//       return res.json({ success: false, message: "User ID not found" });
+//     }
+//     return res.json({ success: true });
+//   } catch (error) {
+//     console.log(error.message);
+//     res.json({ success: false, message: error.message });
+//   }
+// };
 export const isSellerAuth = async (req, res) => {
   try {
-    const userId = req.userId; // bu kisim dogru mu bilmiyorum gecici cozum olabilir
-    if (!userId) {
-      return res.json({ success: false, message: "User ID not found" });
-    }
     return res.json({ success: true });
   } catch (error) {
     console.log(error.message);
